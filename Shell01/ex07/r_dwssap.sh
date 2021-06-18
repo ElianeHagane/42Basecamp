@@ -1,0 +1,1 @@
+cat /etc/passwd | sed '/^#/d' | sed -n "n;p" | cut -d : -f1 | rev | sort -r | sed -n "${FT_LINE1:7} ${FT_LINE2:15} p" | sed 's/$/, /' | tr -d '\n' | sed 's/, $/\./'
